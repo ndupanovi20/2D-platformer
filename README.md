@@ -1,13 +1,12 @@
 # 2D-platformer
-Naravno, evo primjera opisa za Unity projekt 2D platformera na GitHub-u:
 
 ---
 
-# Naziv Projekta: Unity 2D Platformer
+# Naziv Projekta: Unity 2D Platformer (/tačniji naziv soon to be/)
 
 ## Opis:
 
-Dobrodošli u Unity 2D Platformer projekt! Ova igra predstavlja uzbudljivu avanturu koja kombinira klasični žanr platformera s inovativnim elementima i raznovrsnim funkcionalnostima. Istražite šareni svijet pun izazova, neprijatelja i zagonetki dok vaš lik pokušava savladati razne razine.
+Dobrodošli u Unity 2D Platformer projekt! Ova igra predstavlja uzbudljivu avanturu koja kombinira klasični žanr platformera s inovativnim elementima i raznovrsnim funkcionalnostima. Istražite šareni svijet pun izazova, neprijatelja i zagonetki dok vaš lik pokušava savladati razinu.
 
 ## Glavne Značajke:
 
