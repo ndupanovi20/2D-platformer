@@ -5822,11 +5822,11 @@ GameObject:
   m_Component:
   - component: {fileID: 177504510}
   - component: {fileID: 177504509}
-  - component: {fileID: 177504511}
-  - component: {fileID: 177504512}
   - component: {fileID: 177504513}
+  - component: {fileID: 177504515}
+  - component: {fileID: 177504514}
   m_Layer: 0
-  m_Name: Protect_0
+  m_Name: Main_Character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5903,7 +5903,25 @@ RectTransform:
   m_AnchoredPosition: {x: -77.69, y: 8.29}
   m_SizeDelta: {x: 0.35, y: 0.45}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!50 &177504511
+--- !u!114 &177504513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177504508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8370559890ce71c4ea8b787b790db9d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  jumpForce: 10
+  groundCheck: {fileID: 0}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
+--- !u!50 &177504514
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -5929,8 +5947,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!70 &177504512
+  m_Constraints: 0
+--- !u!70 &177504515
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5965,18 +5983,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.35, y: 0.45}
   m_Direction: 0
---- !u!114 &177504513
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 177504508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8370559890ce71c4ea8b787b790db9d8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &180563624
 PrefabInstance:
   m_ObjectHideFlags: 0
