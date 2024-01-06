@@ -6,8 +6,14 @@ public class PlayerMove_Prot : MonoBehaviour
 {
     public int playerSpeed = 10;
     private bool facingRight = false;
-    public int playerJumpPower = 1250;
+    public int playerJumpPower = 600;
     private float moveX;
+
+
+    void Start()
+    {
+
+    }
 
     // Update is called once per frame
     void Update()
