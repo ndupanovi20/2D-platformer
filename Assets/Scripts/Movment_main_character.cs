@@ -8,7 +8,7 @@ public class PlayerMove_Prot : MonoBehaviour
     private bool facingRight = false;
     public int playerJumpPower = 600;
     private float moveX;
-
+    private float moveY; // Dodato za vertikalno kretanje
 
     void Start()
     {
@@ -31,24 +31,26 @@ public class PlayerMove_Prot : MonoBehaviour
     {
         // CONTROLS
         moveX = Input.GetAxis("Horizontal");
+        moveY = Input.GetAxis("Vertical"); // Dodato za vertikalno kretanje
 
         // ANIMATIONS
 
         // PLAYER DIRECTION
-        if (moveX > 0.0f && facingRight == false)
+        if (moveX > 0.0f && !facingRight)
         {
             FlipPlayer();
         }
-        else if (moveX < 0.0f && facingRight == true)
+        else if (moveX < 0.0f && facingRight)
         {
             FlipPlayer();
         }
 
         // PHYSICS
-        gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(moveX * playerSpeed, gameObject.GetComponent<Rigidbody2D>().velocity.y);
+        Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(moveX * playerSpeed, moveY * playerSpeed); // Ažurirano za kretanje u obe ose
 
         // JUMPING CODE
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && Mathf.Approximately(rb.velocity.y, 0)) // Skakanje samo ako je igraè na zemlji
         {
             Jump();
         }
@@ -59,7 +61,7 @@ public class PlayerMove_Prot : MonoBehaviour
 
     void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0); // Resetujemo brzinu pri skoku da bismo izbegli neželjene efekte
+        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0); // Resetujemo brzinu pri skoku da bismo izbegli neželjene efekte
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpPower);
     }
 
