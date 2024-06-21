@@ -47280,7 +47280,7 @@ GameObject:
   - component: {fileID: 332634655}
   m_Layer: 0
   m_Name: TX Village Props Ladder M (5)
-  m_TagString: Untagged
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47294,7 +47294,7 @@ Transform:
   m_GameObject: {fileID: 332634653}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -76.4242, y: 4.0585, z: 0.5}
+  m_LocalPosition: {x: -77.45, y: 3.95, z: 0.5}
   m_LocalScale: {x: 1.0408974, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -47727,7 +47727,7 @@ GameObject:
   - component: {fileID: 480762137}
   m_Layer: 0
   m_Name: TX Village Props Ladder M (8)
-  m_TagString: Untagged
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47741,7 +47741,7 @@ Transform:
   m_GameObject: {fileID: 480762135}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -76.424, y: 1.086, z: 0.5}
+  m_LocalPosition: {x: -77.44, y: 1.1015003, z: 0.5}
   m_LocalScale: {x: 1.0408974, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49152,7 +49152,7 @@ GameObject:
   - component: {fileID: 905262116}
   m_Layer: 0
   m_Name: TX Village Props Ladder M (6)
-  m_TagString: Untagged
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -49166,7 +49166,7 @@ Transform:
   m_GameObject: {fileID: 905262114}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -76.4242, y: 5.0585, z: 0.5}
+  m_LocalPosition: {x: -77.46, y: 4.8715, z: 0.5}
   m_LocalScale: {x: 1.0408974, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50319,6 +50319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PF Village Props - Grass 03
       objectReference: {fileID: 0}
+    - target: {fileID: 3564026850829729313, guid: 4da9b9761848a1848868ed8a0c18f051, type: 3}
+      propertyPath: m_TagString
+      value: Stairs
+      objectReference: {fileID: 0}
     - target: {fileID: 3564026850829729314, guid: 4da9b9761848a1848868ed8a0c18f051, type: 3}
       propertyPath: m_RootOrder
       value: 139
@@ -51284,7 +51288,7 @@ GameObject:
   - component: {fileID: 1317573693}
   m_Layer: 0
   m_Name: TX Village Props B (5)
-  m_TagString: Untagged
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51298,7 +51302,7 @@ Transform:
   m_GameObject: {fileID: 1317573691}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -76.4242, y: 3.0584998, z: 0.5}
+  m_LocalPosition: {x: -77.45, y: 3.0315003, z: 0.5}
   m_LocalScale: {x: 1.0408974, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52184,7 +52188,7 @@ GameObject:
   - component: {fileID: 1507016422}
   m_Layer: 0
   m_Name: TX Village Props Ladder T (2)
-  m_TagString: Untagged
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52198,7 +52202,7 @@ Transform:
   m_GameObject: {fileID: 1507016420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -76.4242, y: 6.0585, z: 0.5}
+  m_LocalPosition: {x: -77.47001, y: 5.8715, z: 0.5}
   m_LocalScale: {x: 1.0408974, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52578,7 +52582,7 @@ GameObject:
   - component: {fileID: 1551654850}
   m_Layer: 0
   m_Name: TX Village Props Ladder M (7)
-  m_TagString: Untagged
+  m_TagString: Stairs
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -52592,7 +52596,7 @@ Transform:
   m_GameObject: {fileID: 1551654848}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -76.4242, y: 2.07, z: 0.5}
+  m_LocalPosition: {x: -77.45, y: 2.0815003, z: 0.5}
   m_LocalScale: {x: 1.0408974, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53024,6 +53028,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chara_01
       objectReference: {fileID: 0}
+    - target: {fileID: 1824416424260298, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
+      propertyPath: m_TagString
+      value: MainCamera
+      objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -53038,43 +53046,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -80.77
+      value: -81.15149
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.14
+      value: 2.1386151
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.014096816
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.044067234
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: -0.004425363
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0.9990154
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0.0025948333
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -0.319
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 174.95
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      value: -0.494
       objectReference: {fileID: 0}
     - target: {fileID: 4868515331449996, guid: 79639b84e20f0ea4694165c0d4554387, type: 3}
       propertyPath: m_ConstrainProportionsScale
@@ -53425,6 +53433,10 @@ PrefabInstance:
     - target: {fileID: 3564026850829729313, guid: 72a905bcc22e3e443be6f48bfb173c00, type: 3}
       propertyPath: m_Name
       value: PF Village Props - Grass 05
+      objectReference: {fileID: 0}
+    - target: {fileID: 3564026850829729313, guid: 72a905bcc22e3e443be6f48bfb173c00, type: 3}
+      propertyPath: m_TagString
+      value: Stairs
       objectReference: {fileID: 0}
     - target: {fileID: 3564026850829729314, guid: 72a905bcc22e3e443be6f48bfb173c00, type: 3}
       propertyPath: m_RootOrder
@@ -54617,7 +54629,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4
+  orthographic size: 5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -54641,13 +54653,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2144174371}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0.0031794996, y: -0.11262154, z: 0.00036037472, w: 0.9936328}
   m_LocalPosition: {x: -63.18, y: 6.091443, z: -19.785934}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 1344934277}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0.367, y: -12.933, z: 0}
 --- !u!4 &2146132202 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3008790804299420990, guid: 05d871b9365825b4ca356e1345739ee2, type: 3}

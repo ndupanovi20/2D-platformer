@@ -12,8 +12,6 @@ public class KameraKojaPrati : MonoBehaviour
     public float minY;
     public float maxY;
 
-    public float udaljenostKamere = -10f; // Dodato za zumiranje
-
     void Start()
     {
         if (igracPozicija == null)
@@ -28,8 +26,7 @@ public class KameraKojaPrati : MonoBehaviour
         {
             float ograniceniX = Mathf.Clamp(igracPozicija.position.x, minX, maxX);
             float ograniceniY = Mathf.Clamp(igracPozicija.position.y, minY, maxY);
-            Vector3 novaPozicija = Vector2.Lerp(transform.position, new Vector2(ograniceniX, ograniceniY), brzina);
-            transform.position = new Vector3(novaPozicija.x, novaPozicija.y, udaljenostKamere); // Podešavanje Z osi
+            transform.position = Vector2.Lerp(transform.position, new Vector2(ograniceniX, ograniceniY), brzina);
         }
     }
 }

@@ -5,17 +5,17 @@ using UnityEngine;
 public class PlayerMove_Prot : MonoBehaviour
 {
     public int playerSpeed = 10;
-    private bool facingRight = false;
+    private bool facingRight = false; // Postavljamo na false da igraè na poèetku gleda levo
     public int playerJumpPower = 600;
     private float moveX;
-    private float moveY; // Dodato za vertikalno kretanje
+    private float moveY;
 
     void Start()
     {
-
+        // Inicijalizujemo facingRight na false ako želimo da igraè na poèetku gleda levo
+        facingRight = false;
     }
 
-    // Update is called once per frame
     void Update()
     {
         PlayerMove();
@@ -31,9 +31,7 @@ public class PlayerMove_Prot : MonoBehaviour
     {
         // CONTROLS
         moveX = Input.GetAxis("Horizontal");
-        moveY = Input.GetAxis("Vertical"); // Dodato za vertikalno kretanje
-
-        // ANIMATIONS
+        moveY = Input.GetAxis("Vertical");
 
         // PLAYER DIRECTION
         if (moveX > 0.0f && !facingRight)
@@ -47,10 +45,16 @@ public class PlayerMove_Prot : MonoBehaviour
 
         // PHYSICS
         Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(moveX * playerSpeed, moveY * playerSpeed); // Ažurirano za kretanje u obe ose
+        rb.velocity = new Vector2(moveX * playerSpeed, rb.velocity.y);
+
+        // MOVING VERTICALLY
+        if (moveY != 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, moveY * playerSpeed);
+        }
 
         // JUMPING CODE
-        if (Input.GetButtonDown("Jump") && Mathf.Approximately(rb.velocity.y, 0)) // Skakanje samo ako je igraè na zemlji
+        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f) // Skakanje samo ako je igraè na zemlji
         {
             Jump();
         }
@@ -61,8 +65,9 @@ public class PlayerMove_Prot : MonoBehaviour
 
     void Jump()
     {
-        GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x, 0); // Resetujemo brzinu pri skoku da bismo izbegli neželjene efekte
-        GetComponent<Rigidbody2D>().AddForce(Vector2.up * playerJumpPower);
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb.velocity = new Vector2(rb.velocity.x, 0); // Resetujemo vertikalnu brzinu pri skoku da bismo izbegli neželjene efekte
+        rb.AddForce(Vector2.up * playerJumpPower);
     }
 
     void FlipPlayer()
