@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public static GameManager instance;
+    public bool hasKey = false;
+
+    void Awake()
     {
-        
+        // Osiguravamo da postoji samo jedan GameManager instance
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public void EndGame()
     {
-        
+        // Završavamo igru
+        Debug.Log("Game Over! You win!");
+        // Ovde možete dodati logiku za završavanje igre
     }
 }
