@@ -5,13 +5,19 @@ using UnityEngine;
 public class PlayerMove_Prot : MonoBehaviour
 {
     public int playerSpeed = 10;
-    private bool facingRight = true; 
+    private bool facingRight = true;
     public int playerJumpPower = 300;
     private float moveX;
     private float moveY;
 
     private Animator animator;
     private Rigidbody2D rb;
+
+    private int jumpCount; 
+
+    public Transform groundCheck; 
+    public float groundCheckRadius = 0.2f; 
+    public LayerMask whatIsGround; 
 
     void Start()
     {
@@ -29,13 +35,19 @@ public class PlayerMove_Prot : MonoBehaviour
             Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
         }
 
-        
+       
+        bool isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+        if (isGrounded)
+        {
+            jumpCount = 0; 
+        }
+
+       
         animator.SetFloat("yVelocity", rb.velocity.y);
     }
 
     void PlayerMove()
     {
-        
         moveX = Input.GetAxis("Horizontal");
         moveY = Input.GetAxis("Vertical");
 
@@ -59,7 +71,7 @@ public class PlayerMove_Prot : MonoBehaviour
         }
 
         
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f) 
+        if (Input.GetButtonDown("Jump") && jumpCount < 2 && Mathf.Abs(rb.velocity.y) < 0.001f)
         {
             Jump();
         }
@@ -76,6 +88,7 @@ public class PlayerMove_Prot : MonoBehaviour
     {
         rb.velocity = new Vector2(rb.velocity.x, 0); 
         rb.AddForce(Vector2.up * playerJumpPower);
+        jumpCount++; 
     }
 
     void FlipPlayer()
