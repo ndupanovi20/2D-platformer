@@ -8,9 +8,9 @@ public class KeyPickup : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            // Oznacavamo da je igrac pokupio kljuc
+            
             GameManager.instance.hasKey = true;
-            // Uništavamo kljuè sa scene
+            
             Destroy(gameObject);
         }
     }

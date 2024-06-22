@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMove_Prot : MonoBehaviour
 {
     public int playerSpeed = 10;
-    private bool facingRight = true; // Postavljamo na true ako igraè na poèetku gleda desno
+    private bool facingRight = true; 
     public int playerJumpPower = 300;
     private float moveX;
     private float moveY;
@@ -23,23 +23,23 @@ public class PlayerMove_Prot : MonoBehaviour
     {
         PlayerMove();
 
-        // Pomeranje i rotacija kamere zajedno s karakterom
+        
         if (Camera.main != null)
         {
             Camera.main.transform.position = new Vector3(transform.position.x, transform.position.y, Camera.main.transform.position.z);
         }
 
-        // Ažuriramo animator sa yVelocity za skakanje
+        
         animator.SetFloat("yVelocity", rb.velocity.y);
     }
 
     void PlayerMove()
     {
-        // CONTROLS
+        
         moveX = Input.GetAxis("Horizontal");
         moveY = Input.GetAxis("Vertical");
 
-        // PLAYER DIRECTION
+        
         if (moveX > 0.0f && !facingRight)
         {
             FlipPlayer();
@@ -49,32 +49,32 @@ public class PlayerMove_Prot : MonoBehaviour
             FlipPlayer();
         }
 
-        // PHYSICS
+        
         rb.velocity = new Vector2(moveX * playerSpeed, rb.velocity.y);
 
-        // MOVING VERTICALLY
+        
         if (moveY != 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, moveY * playerSpeed);
         }
 
-        // JUMPING CODE
-        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f) // Skakanje samo ako je igraè na zemlji
+        
+        if (Input.GetButtonDown("Jump") && Mathf.Abs(rb.velocity.y) < 0.001f) 
         {
             Jump();
         }
 
-        // Postavljamo Z-rotaciju na 0
+        
         transform.rotation = Quaternion.Euler(0, 0, 0);
 
-        // Ažuriramo animator parametre
+        
         animator.SetBool("isWalking", moveX != 0);
         animator.SetBool("isJumping", !Mathf.Approximately(rb.velocity.y, 0));
     }
 
     void Jump()
     {
-        rb.velocity = new Vector2(rb.velocity.x, 0); // Resetujemo vertikalnu brzinu pri skoku da bismo izbegli neželjene efekte
+        rb.velocity = new Vector2(rb.velocity.x, 0); 
         rb.AddForce(Vector2.up * playerJumpPower);
     }
 

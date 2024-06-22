@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class Door : MonoBehaviour
 {
-    public GameObject closedDoor; // Reference na zatvorena vrata
-    public GameObject openDoor;   // Reference na otvorena vrata
+    public GameObject closedDoor;
+    public GameObject openDoor;  
 
     void Start()
     {
-        // Inicijalno postavljamo da su vrata zatvorena
+       
         closedDoor.SetActive(true);
         openDoor.SetActive(false);
     }
@@ -18,8 +18,9 @@ public class Door : MonoBehaviour
     {
         if (GameManager.instance.hasKey)
         {
-            // Ako igraè ima kljuè, otvaramo vrata
+            
             closedDoor.SetActive(false);
+          
             openDoor.SetActive(true);
         }
     }
@@ -28,7 +29,7 @@ public class Door : MonoBehaviour
     {
         if (other.CompareTag("Player") && GameManager.instance.hasKey)
         {
-            // Ako igraè ima kljuè i prolazi kroz vrata, završavamo igru
+            
             GameManager.instance.EndGame();
         }
     }
